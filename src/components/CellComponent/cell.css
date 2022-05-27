@@ -9,3 +9,23 @@
 .black {
   background: #B58863;
 }
+.cell.selected {
+
+  background-color: #FB2B2B;
+  box-shadow: 0 0 15px 0 #FB2B2B;
+  z-index: 999;
+}
+.available {
+  /*background-color: blue;*/
+  border-radius: 50%;
+  width: 1rem;
+  height: 1rem;
+  background-color: blue;
+  /*border: 2px solid;*/
+  /*box-shadow: 0 0 15px 0 blue;*/
+  /*z-index: 0;*/
+}
+.cell.attacked {
+  box-shadow: 0 0 15px 0 green;
+  z-index: 1;
+}

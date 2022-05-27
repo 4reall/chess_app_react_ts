@@ -13,4 +13,8 @@ export class Bishop extends Figure {
 		this.name = FigureNames.BISHOP;
 		this.logo = color === Colors.BLACK ? blackBishop : whiteBishop;
 	}
+	public canMove(target: Cell): boolean {
+		if (!super.canMove(target)) return false;
+		return true;
+	}
 }
