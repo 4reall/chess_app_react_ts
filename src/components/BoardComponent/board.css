@@ -1,0 +1,19 @@
+.board {
+  width: calc(4rem * 8);
+  height: calc(4rem * 8);
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+}
+
+.cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.white {
+  background: #F0D9B5;
+}
+.black {
+  background: #B58863;
+}

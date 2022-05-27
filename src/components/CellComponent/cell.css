@@ -1,0 +1,11 @@
+.cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.white {
+  background: #F0D9B5;
+}
+.black {
+  background: #B58863;
+}
