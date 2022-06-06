@@ -19,6 +19,12 @@ const BoardComponent = ({ board, setBoard }: BoardProps) => {
 	}, [selectedCell]);
 
 	const onClick = (cell: Cell) => {
+		if (cell.isEmpty() && !selectedCell?.figure?.canMove(cell)) return;
+		if (selectedCell === cell) {
+			setSelectedCell(null);
+			highlightCell();
+			return;
+		}
 		if (
 			selectedCell &&
 			selectedCell !== cell &&

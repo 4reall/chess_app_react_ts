@@ -31,6 +31,13 @@ export class Cell {
 		return this.figure === null;
 	}
 
+	public isEnemy(target: Cell): boolean {
+		if (target.figure) {
+			return this.figure?.color !== target.figure.color;
+		}
+		return false;
+	}
+
 	public isEmptyHorizontal(target: Cell): boolean {
 		if (this.y !== target.y) return false;
 
