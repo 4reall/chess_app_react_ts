@@ -27,18 +27,18 @@ export class Cell {
 		this.id = Math.random();
 	}
 
-	public isEmpty(): boolean {
+	isEmpty(): boolean {
 		return this.figure === null;
 	}
 
-	public isEnemy(target: Cell): boolean {
+	isEnemy(target: Cell): boolean {
 		if (target.figure) {
 			return this.figure?.color !== target.figure.color;
 		}
 		return false;
 	}
 
-	public isEmptyHorizontal(target: Cell): boolean {
+	isEmptyHorizontal(target: Cell): boolean {
 		if (this.y !== target.y) return false;
 
 		const min = Math.min(this.x, target.x);
@@ -49,7 +49,7 @@ export class Cell {
 		return true;
 	}
 
-	public isEmptyVertical(target: Cell): boolean {
+	isEmptyVertical(target: Cell): boolean {
 		if (this.x !== target.x) return false;
 
 		const min = Math.min(this.y, target.y);
@@ -60,7 +60,7 @@ export class Cell {
 		return true;
 	}
 
-	public isEmptyDiagonal(target: Cell): boolean {
+	isEmptyDiagonal(target: Cell): boolean {
 		const absX = Math.abs(target.x - this.x);
 		const absY = Math.abs(target.y - this.y);
 
@@ -81,9 +81,18 @@ export class Cell {
 		this.figure.cell = this;
 	}
 
-	public moveFigure(target: Cell) {
+	addLostFigure = (figure: Figure) => {
+		figure.color !== Colors.WHITE
+			? this.board.lostWhiteFigures.push(figure)
+			: this.board.lostBlackFigures.push(figure);
+	};
+
+	moveFigure(target: Cell) {
 		if (this.figure && this.figure.canMove(target)) {
 			this.figure.moveFigure(target);
+			if (target.figure) {
+				this.addLostFigure(target.figure);
+			}
 			target.setFigure(this.figure);
 			this.figure = null;
 		}

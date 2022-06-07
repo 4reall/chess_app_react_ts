@@ -5,13 +5,21 @@ import { Board } from '../../models/Board';
 import { Cell } from '../../models/Cell';
 
 import './board.css';
+import { Player } from '../../models/Player';
 
 interface BoardProps {
 	board: Board;
 	setBoard: (board: Board) => void;
+	currentPlayer: Player | null;
+	swapPlayer: () => void;
 }
 
-const BoardComponent = ({ board, setBoard }: BoardProps) => {
+const BoardComponent = ({
+	board,
+	setBoard,
+	currentPlayer,
+	swapPlayer,
+}: BoardProps) => {
 	const [selectedCell, setSelectedCell] = useState<Cell | null>(null);
 
 	useEffect(() => {
@@ -22,7 +30,6 @@ const BoardComponent = ({ board, setBoard }: BoardProps) => {
 		if (cell.isEmpty() && !selectedCell?.figure?.canMove(cell)) return;
 		if (selectedCell === cell) {
 			setSelectedCell(null);
-			highlightCell();
 			return;
 		}
 		if (
@@ -32,7 +39,10 @@ const BoardComponent = ({ board, setBoard }: BoardProps) => {
 		) {
 			selectedCell.moveFigure(cell);
 			setSelectedCell(null);
-		} else {
+			swapPlayer();
+			return;
+		}
+		if (cell?.figure?.color === currentPlayer?.color) {
 			setSelectedCell(cell);
 		}
 	};
