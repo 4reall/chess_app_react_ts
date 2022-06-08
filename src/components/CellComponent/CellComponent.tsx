@@ -20,7 +20,7 @@ const CellComponent = ({ cell, selected, onClick }: CellProps) => {
 		!cell.figure && cell.available ? <div className={'available'} /> : null;
 
 	const figureLogo = cell.figure?.logo && (
-		<img src={cell.figure.logo} alt={'figure'} />
+		<img draggable={false} src={cell.figure.logo} alt={'figure'} />
 	);
 
 	return (

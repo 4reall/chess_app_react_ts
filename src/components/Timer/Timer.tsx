@@ -1,38 +1,65 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 import './timer.css';
-import { stat } from 'fs';
+import { Player } from '../../models/Player';
 
 interface TimerProps {
+	currentPlayer: Player | null;
 	initialSecondsAmount: number;
+	restartGame: () => void;
 }
 
-const Timer = ({ initialSecondsAmount }: TimerProps) => {
-	const [minutes, setMinutes] = useState(
-		Math.floor(initialSecondsAmount / 60)
-	);
-	const [seconds, setSeconds] = useState(
-		Math.round(initialSecondsAmount % 60)
-	);
+const Timer = ({
+	initialSecondsAmount,
+	currentPlayer,
+	restartGame,
+}: TimerProps) => {
+	const [time, setTime] = useState(initialSecondsAmount);
+
+	const timer = useRef<null | ReturnType<typeof setInterval>>(null);
+
+	const getMin = (time: number) => Math.floor(time / 60);
+	const getSec = (time: number) => Math.round(time % 60);
+	const decreaseTime = (setState: typeof setTime) => {
+		setState((state) => state - 1);
+	};
+
+	const startTimer = () => {
+		if (timer.current) {
+			setTime(initialSecondsAmount);
+			clearInterval(timer.current);
+		}
+
+		let time = initialSecondsAmount;
+
+		timer.current = setInterval(() => {
+			if (time === 0 && timer.current) {
+				clearInterval(timer.current);
+			} else {
+				decreaseTime(setTime);
+				time--;
+			}
+		}, 1000);
+	};
+
 	useEffect(() => {
-		// const minutesId = setInterval(() => {
-		// 	setMinutes((state) => state - 1);
-		// }, 60000);
-		// const secondsId = setInterval(() => {
-		// 	console.log(seconds);
-		// 	if (seconds < 0) {
-		// 		console.log('123');
-		// 		setMinutes((state) => state - 1);
-		// 		setSeconds(60);
-		// 	}
-		// 	setSeconds((state) => state - 1);
-		// }, 1000);
-	}, []);
+		startTimer();
+	}, [currentPlayer]);
+
+	const handleClick = () => {
+		restartGame();
+		startTimer();
+	};
+
 	return (
 		<div className="timer">
 			<div className="timer__time">
-				Осталось: {minutes}:{seconds < 10 ? seconds + '0' : seconds}
+				Осталось: {getMin(time)}:
+				{getSec(time) % 60 < 10 ? '0' + getSec(time) : getSec(time)}
 			</div>
+			<button className="info-board__btn" onClick={handleClick}>
+				reset
+			</button>
 		</div>
 	);
 };

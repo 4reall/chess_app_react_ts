@@ -17,10 +17,11 @@ const InfoBoard = ({ restartGame, currentPlayer }: InfoBoardProps) => {
 				<div className="info-board__text">Ходит:</div>
 				<div className={`info-board__color ${color}`}></div>
 			</div>
-			<Timer initialSecondsAmount={180} />
-			<button className="info-board__btn" onClick={restartGame}>
-				reset
-			</button>
+			<Timer
+				restartGame={restartGame}
+				currentPlayer={currentPlayer}
+				initialSecondsAmount={180}
+			/>
 		</div>
 	);
 };
