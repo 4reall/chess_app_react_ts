@@ -1,0 +1,18 @@
+<svg width="47" height="45" viewBox="0 0 47 45" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="g1">
+        <g id="g2">
+            <path id="path1" fill="#000000" fill-rule="evenodd" stroke="none" d="M 8.75 12 C 8.75 13.518784 7.518784 14.75 6 14.75 C 4.481216 14.75 3.25 13.518784 3.25 12 C 3.25 10.481216 4.481216 9.25 6 9.25 C 7.518784 9.25 8.75 10.481216 8.75 12 Z"/>
+            <path id="path2" fill="#000000" fill-rule="evenodd" stroke="none" d="M 16.75 9 C 16.75 10.518784 15.518784 11.75 14 11.75 C 12.481216 11.75 11.25 10.518784 11.25 9 C 11.25 7.481216 12.481216 6.25 14 6.25 C 15.518784 6.25 16.75 7.481216 16.75 9 Z"/>
+            <path id="path3" fill="#000000" fill-rule="evenodd" stroke="none" d="M 25.25 8 C 25.25 9.518784 24.018784 10.75 22.5 10.75 C 20.981216 10.75 19.75 9.518784 19.75 8 C 19.75 6.481216 20.981216 5.25 22.5 5.25 C 24.018784 5.25 25.25 6.481216 25.25 8 Z"/>
+            <path id="path4" fill="#000000" fill-rule="evenodd" stroke="none" d="M 33.75 9 C 33.75 10.518784 32.518784 11.75 31 11.75 C 29.481216 11.75 28.25 10.518784 28.25 9 C 28.25 7.481216 29.481216 6.25 31 6.25 C 32.518784 6.25 33.75 7.481216 33.75 9 Z"/>
+            <path id="path5" fill="#000000" fill-rule="evenodd" stroke="none" d="M 41.75 12 C 41.75 13.518784 40.518784 14.75 39 14.75 C 37.481216 14.75 36.25 13.518784 36.25 12 C 36.25 10.481216 37.481216 9.25 39 9.25 C 40.518784 9.25 41.75 10.481216 41.75 12 Z"/>
+        </g>
+        <path id="path6" fill="#000000" fill-rule="evenodd" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M 9 26 C 17.5 24.5 30 24.5 36 26 L 38.5 13.5 L 31 25 L 30.699997 10.900002 L 25.5 24.5 L 22.5 10 L 19.5 24.5 L 14.299999 10.900002 L 14 25 L 6.5 13.5 L 9 26 Z"/>
+        <path id="path7" fill="#000000" fill-rule="evenodd" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M 9 26 C 9 28 10.5 28 11.5 30 C 12.5 31.5 12.5 31 12 33.5 C 10.5 34.5 10.5 36 10.5 36 C 9 37.5 11 38.5 11 38.5 C 17.5 39.5 27.5 39.5 34 38.5 C 34 38.5 35.5 37.5 34 36 C 34 36 34.5 34.5 33 33.5 C 32.5 31 32.5 31.5 33.5 30 C 34.5 28 36 28 36 26 C 27.5 24.5 17.5 24.5 9 26 Z"/>
+        <path id="path8" fill="none" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M 11 38.5 C 18.447762 41.090973 26.552238 41.090973 34 38.5"/>
+        <path id="path9" fill="none" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M 11 29 C 18.447762 26.409025 26.552238 26.409025 34 29"/>
+        <path id="path10" fill="none" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M 12.5 31.5 L 32.5 31.5"/>
+        <path id="path11" fill="none" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M 11.5 34.5 C 18.642708 36.864674 26.357292 36.864674 33.5 34.5"/>
+        <path id="path12" fill="none" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M 10.5 37.5 C 18.249973 40.328579 26.750031 40.328579 34.5 37.5"/>
+    </g>
+</svg>

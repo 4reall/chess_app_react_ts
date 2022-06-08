@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/chess_app_react_ts/static/css/main.cc9e62fa.css",
+    "main.js": "/chess_app_react_ts/static/js/main.87beeee7.js",
+    "static/media/queen.svg": "/chess_app_react_ts/static/media/queen.b418ddb5ba395d033505807ef06d8cec.svg",
+    "static/media/rook.svg": "/chess_app_react_ts/static/media/rook.2ce705a71e35ff22ab02593de0db42b8.svg",
+    "static/media/knight.svg": "/chess_app_react_ts/static/media/knight.b1589d376bfa248f6ba41ffacb56943e.svg",
+    "static/media/king.svg": "/chess_app_react_ts/static/media/king.545d70a87d717c319e3a33312f88a59b.svg",
+    "static/media/bishop.svg": "/chess_app_react_ts/static/media/bishop.a673a604bc86ce01f8af4d1703052ac4.svg",
+    "static/media/pawn.svg": "/chess_app_react_ts/static/media/pawn.5ef4402d6bd93c63e29a2b2ae93bf6a5.svg",
+    "index.html": "/chess_app_react_ts/index.html",
+    "main.cc9e62fa.css.map": "/chess_app_react_ts/static/css/main.cc9e62fa.css.map",
+    "main.87beeee7.js.map": "/chess_app_react_ts/static/js/main.87beeee7.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.cc9e62fa.css",
+    "static/js/main.87beeee7.js"
+  ]
+}
