@@ -18,6 +18,7 @@ export class Figure {
 	logo: typeof logo | null;
 	cell: Cell;
 	name: FigureNames;
+	isAttacked: boolean;
 	id: number;
 
 	constructor(color: Colors, cell: Cell) {
@@ -26,6 +27,7 @@ export class Figure {
 		this.cell.figure = this;
 		this.name = FigureNames.FIGURE;
 		this.logo = null;
+		this.isAttacked = false;
 		this.id = Math.random();
 	}
 

@@ -10,7 +10,7 @@ import whiteRook from '../../assets/images/white/rook.svg';
 export class Rook extends Figure {
 	constructor(color: Colors, cell: Cell) {
 		super(color, cell);
-		this.name = FigureNames.KNIGHT;
+		this.name = FigureNames.ROOK;
 		this.logo = color === Colors.BLACK ? blackRook : whiteRook;
 	}
 	public canMove(target: Cell): boolean {

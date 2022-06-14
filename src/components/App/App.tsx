@@ -6,12 +6,14 @@ import { Player } from '../../models/Player';
 import { Colors } from '../../models/Colors';
 import InfoBoard from '../infoBoard/InfoBoard';
 import FigureList from '../FigureList/FigureList';
+import Modal from '../Modal/Modal';
 
 function App() {
 	const [board, setBoard] = useState(new Board());
 	const [whitePlayer, setWhitePlayer] = useState(new Player(Colors.WHITE));
 	const [blackPlayer, setBlackPlayer] = useState(new Player(Colors.BLACK));
 	const [currentPlayer, setCurrentPlayer] = useState<Player | null>(null);
+	const [isCheck, setIsCheck] = useState(false);
 
 	useEffect(() => {
 		restartGame();
@@ -34,6 +36,7 @@ function App() {
 
 	return (
 		<div className="app">
+			{isCheck && <Modal />}
 			<InfoBoard
 				currentPlayer={currentPlayer}
 				restartGame={restartGame}

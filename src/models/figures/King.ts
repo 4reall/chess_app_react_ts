@@ -12,12 +12,16 @@ export class King extends Figure {
 		super(color, cell);
 		this.name = FigureNames.KING;
 		this.logo = color === Colors.BLACK ? blackKing : whiteKing;
+		this.isAttacked = false;
 	}
-	public canMove(target: Cell): boolean {
+	isCheck(): boolean {
+		return true;
+	}
+
+	canMove(target: Cell): boolean {
 		if (!super.canMove(target)) return false;
 		if (Math.abs(target.x - this.cell.x) > 1) return false;
 		if (Math.abs(target.y - this.cell.y) > 1) return false;
-		return true;
 		return true;
 	}
 }
